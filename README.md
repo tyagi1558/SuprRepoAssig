@@ -35,10 +35,10 @@ Collaborative Whiteboard Application
 2. **Install dependencies:**
     - **Backend (server):** Navigate to the Server folder:
        ```bash
-        cd server.js
+        cd server
    - **Install frontend dependencies:** Install dependencies:
        ```bash
-       npm install 
+       npm install --force
   - **Start the server:** 
        ```bash
       node server.js || nodemon server.js 
@@ -51,7 +51,7 @@ Collaborative Whiteboard Application
  - **Install frontend dependencies:** Install dependencies:
   
     ```bash
-      npm install
+      npm install --force
 **Start the server:**
 
    ```bash
