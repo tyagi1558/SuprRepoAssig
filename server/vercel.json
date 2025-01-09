@@ -1,19 +1,18 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "./server.js",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-        {
-            "src":"/(.*)",
-            "dest":"/"
-        }
-    ],
-    "env": {
-      "DB_CONNECTION_STRING": "mysql://root:Anmol@6396@localhost:3306/suprdense"
+  "version": 2,
+  "builds": [
+    {
+      "src": "server/index.js",
+      "use": "@vercel/node"
     }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    }
+  ],
+  "dev": {
+    "listen": 5000
   }
-  
+}
