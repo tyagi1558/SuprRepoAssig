@@ -1,6 +1,6 @@
 // models/Whiteboard.js
 module.exports = (sequelize, DataTypes) => {
-    const Whiteboard = sequelize.define('Whiteboard', {
+    const Whiteboard = sequelize.define('whiteboards', {
       roomId: {
         type: DataTypes.STRING,
         allowNull: false,
