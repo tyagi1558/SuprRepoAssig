@@ -50,7 +50,7 @@ Collaborative Whiteboard Application
 **Start the server:**
 
    ```bash
-   ng start
+   npm start
 
 The server will start on http://localhost:3000 by default.
 
