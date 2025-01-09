@@ -27,7 +27,7 @@ Collaborative Whiteboard Application
 
 ## Installation
 
-2. **Clone the repository**:
+1. **Clone the repository**:
    ```bash
    git clone https://github.com/tyagi1558/SuprRepoAssig.git
    
