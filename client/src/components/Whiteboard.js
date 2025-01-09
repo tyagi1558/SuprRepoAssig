@@ -57,7 +57,7 @@ const Whiteboard = ({ roomId }) => {
 
     updateCanvasSize();
     window.addEventListener('resize', updateCanvasSize);
-    socket.current = io('http://localhost:5000', { transports: ['websocket'] });
+    socket.current = io('https://suprrepoassig-d605.onrender.com', { transports: ['websocket'] });
     socket.current.emit('joinRoom', roomId);
 
     socket.current.on('whiteboardData', (data) => {

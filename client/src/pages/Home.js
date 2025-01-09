@@ -20,7 +20,7 @@ const Home = ({ socket }) => {
 
   const joinSession = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/session/room/${id}`);
+      const response = await fetch(`https://suprrepoassig-d605.onrender.com/api/session/room/${id}`);
       const data = await response.json();
       if (data.roomId) {
         setRoomId(id);
@@ -40,7 +40,7 @@ const Home = ({ socket }) => {
 
   const createSession = async (id, name) => {
     try {
-      const response = await fetch('http://localhost:5000/api/session/create', {
+      const response = await fetch('https://suprrepoassig-d605.onrender.com/api/session/create', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ roomId: id, roomName: name }), 
