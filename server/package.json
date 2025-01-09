@@ -5,9 +5,7 @@
   "main": "index.js",
  "scripts": {
   "build": "npm install",
-  "start": "npm run build:server",
-  "build:server": "node server/server.js"
-},
+"start": "nodemon server.js"},
   "keywords": [],
   "author": "",
   "license": "ISC",
