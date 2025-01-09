@@ -33,10 +33,10 @@ Collaborative Whiteboard Application
    
 
 2. **Install dependencies:**
-    - **Backend (server):** Navigate to the Server folder:
+  - **Backend (server):** Navigate to the Server folder:
        ```bash
         cd server
-   - **Install frontend dependencies:** Install dependencies:
+  - **Install Backend dependencies:** Install dependencies:
        ```bash
        npm install --force
   - **Start the server:** 
