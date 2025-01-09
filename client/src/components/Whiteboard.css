@@ -1,19 +1,33 @@
-.whiteboard-container {
+.canvas-container {
   position: relative;
   width: 100%;
   height: 100vh; /* Take full viewport height */
-  overflow: hidden; /* Prevent overflow issues */
   display: flex;
+  flex-direction: column; /* Stack elements vertically */
   justify-content: center;
   align-items: center;
   padding: 2rem; /* Add space around the canvas */
   box-sizing: border-box; /* Ensure padding doesn't affect width/height calculations */
   background: #f4f4f4; /* Light background for the whiteboard */
+  overflow: hidden; /* Prevent overflow issues */
+  border-radius: 1rem; /* Rounded corners for the canvas container */
 }
 
-/* Canvas container - added border and shadow */
-.canvas-container {
-  position: relative;
+/* Toolbar container style */
+.toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff; /* Toolbar background */
+  z-index: 10; /* Ensure toolbar is above the canvas */
+}
+
+/* Canvas container styles */
+.whiteboard-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,56 +35,58 @@
   max-width: 90%; /* Prevent canvas from exceeding container width */
   max-height: 90%; /* Prevent canvas from exceeding container height */
   overflow: hidden; /* Hide overflow content */
-  border: 0.2rem solid #000; /* Border around the canvas */
-  border-radius: 1rem; /* Rounded corners for a soft look */
-  box-shadow: 0 0.4rem 2rem rgba(0, 0, 0, 0.1); /* Light shadow around the canvas */
+  margin-top: 5rem; /* Space for toolbar */
   background: #fff; /* White background for canvas area */
 }
 
-canvas {
-  border: none; /* Remove default border for canvas */
+/* Canvas styling with border */
+.whiteboard {
+  border: 0.2rem solid #000; /* Border around the canvas */
+  border-radius: 1rem; /* Rounded corners for the canvas */
   max-width: 100%; /* Responsive width */
   height: auto; /* Maintain aspect ratio */
   display: block; /* Remove space below canvas */
   box-sizing: border-box; /* Account for border within canvas size */
 }
 
-/* Make the canvas responsive */
 @media (max-width: 64rem) { /* Tablets and smaller (1024px) */
   .canvas-container {
-    width: 85%; /* Adjust width for smaller devices */
-    height: auto;
+    padding: 1rem; /* Adjust padding for smaller devices */
   }
 
-  canvas {
+  .whiteboard-container {
+    width: 85%; /* Adjust width for smaller devices */
+  }
+
+  .whiteboard {
     width: 100%; /* Ensure full width */
     height: auto;
   }
 }
 
 @media (max-width: 48rem) { /* Mobile devices (768px) */
-  .whiteboard-container {
+  .canvas-container {
     padding: 1rem; /* Adjust padding for mobile */
   }
 
-  .canvas-container {
+  .whiteboard-container {
     width: 95%; /* Further shrink for smaller screens */
     max-width: 100%;
   }
 
-  canvas {
+  .whiteboard {
     width: 100%; /* Full width */
     height: auto;
   }
 }
 
 @media (max-width: 30rem) { /* Extra small screens (480px) */
-  .canvas-container {
+  .whiteboard-container {
     width: 100%; /* Full width for very small screens */
     max-width: 100%;
   }
 
-  canvas {
+  .whiteboard {
     width: 100%; /* Ensure canvas takes full width */
     height: auto;
   }
