@@ -25,33 +25,36 @@ Collaborative Whiteboard Application
 - **server**: Backend Node.js application for managing the whiteboard sessions and real-time communication
 - **How Applicaation works**![Chart of full application](https://github.com/user-attachments/assets/1e9dddb4-33a1-4b21-9352-50d733b0e5c5)
 
-## How to Run the Project
-
-- **Prerequisites**
-- **Node.js (v12 or higher)**
-- **Angular CLI**
-
 ## Installation
 
-1. **Clone the repository**:
+2. **Clone the repository**:
    ```bash
    git clone https://github.com/tyagi1558/SuprRepoAssig.git
    
 
 2. **Install dependencies:**
-   **Frontend (Client):** Navigate to the client folder:
+    - **Backend (server):** Navigate to the Server folder:
+       ```bash
+        cd server.js
+   - **Install frontend dependencies:** Install dependencies:
+       ```bash
+       npm install 
+  - **Start the server:** 
+       ```bash
+      node server.js || nodemon server.js 
+  - **Node version must be Greater then 14V**
+
+   - **Frontend (Client):** Navigate to the client folder:
     
      ```bash
       cd client
-  **Install frontend dependencies:** Install dependencies:
+ - **Install frontend dependencies:** Install dependencies:
   
     ```bash
-     npm install
+      npm install
 **Start the server:**
 
    ```bash
    npm start
 
 The server will start on http://localhost:3000 by default.
-
-
