@@ -1,0 +1,145 @@
+/* Toolbar container */
+.toolbar {
+  display: flex;
+  gap: 15px;
+  padding: 10px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  margin: 20px auto;
+  position: fixed; /* Fixed position for header */
+  top: 0; /* Position at the top of the screen */
+  left: 50%;
+  transform: translateX(-50%); /* Center it horizontally */
+  z-index: 10; /* Keep above canvas */
+  justify-content: center; /* Center buttons within the toolbar */
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+  box-sizing: border-box; /* Make sure padding is included in width calculations */
+}
+
+/* Toolbar button styles */
+.toolbar button {
+  padding: 8px 16px;  /* Adjust padding for proper size */
+  font-size: 14px;  /* Set appropriate font size */
+  border: none;
+  border-radius: 5px;
+  background: #4caf50;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;  /* Set a minimum width */
+  height: 40px;  /* Set a consistent height */
+  margin-top: 10px;  /* Reduce top margin */
+  flex: 1 1 100px;  /* Allow buttons to grow and shrink, but with a minimum width */
+}
+
+/* Pencil color picker */
+#colorPicker {
+  padding: 8px;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  width: 120px; /* Fixed width */
+  height: 35px; /* Set a consistent height */
+}
+
+#colorPicker:focus {
+  border-color: #4CAF50; /* Highlight border on focus */
+  outline: none; /* Remove default outline */
+}
+
+/* Pencil thickness selector */
+#thicknessSelect {
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+  transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  width: 120px; /* Set width to accommodate options */
+  height: 35px; /* Set a consistent height */
+}
+
+#thicknessSelect:focus {
+  border-color: #4CAF50; /* Highlight border on focus */
+  outline: none; /* Remove default outline */
+}
+
+/* Label styling */
+label {
+  font-size: 14px;
+  margin-right: 10px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Add padding to whiteboard container to avoid overlap with the fixed toolbar */
+.whiteboard-container {
+  padding-top: 90px; /* Adjust padding-top to give enough space for toolbar */
+}
+
+/* Responsive styles for large and medium screens */
+@media (min-width: 769px) {
+  .toolbar {
+    justify-content: center; /* Keep buttons in one line */
+    gap: 15px; /* Add space between buttons */
+    flex-wrap: nowrap; /* Prevent wrapping of buttons */
+  }
+
+  .toolbar button {
+    width: auto; /* Allow buttons to shrink */
+    padding: 8px 16px; /* Keep button size consistent */
+  }
+
+  #colorPicker,
+  #thicknessSelect {
+    width: 120px; /* Set width to standard size */
+    height: 35px;
+  }
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+  .toolbar {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px;  /* Add space between buttons */
+    padding: 15px;
+  }
+
+  .toolbar button {
+    width: 100%;  /* Make buttons full width */
+    padding: 12px 0;  /* Adjust padding for mobile */
+    font-size: 16px;  /* Increase font size slightly for easier touch */
+  }
+
+  #colorPicker,
+  #thicknessSelect {
+    width: 100%; /* Make inputs full width on smaller screens */
+    height: 40px; /* Increase height on smaller screens */
+    padding: 12px; /* Increase padding */
+  }
+
+  label {
+    font-size: 16px; /* Increase label font size for mobile */
+  }
+}
+
+/* Extra small screen (phone) adjustments */
+@media (max-width: 480px) {
+  .toolbar {
+    padding: 12px;  /* Reduce padding */
+  }
+
+  .toolbar button {
+    font-size: 14px;  /* Reduce font size */
+    height: 40px;  /* Keep button height consistent */
+  }
+}

@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+
+/* Custom styling for specific buttons */
+.toolbar .clear-btn {
+  background: #f44336;
+}
+
+.toolbar .clear-btn:hover {
+  background-color: #e53935;
+}
+
+.toolbar .logout-btn {
+  background: #ff9800; /* Amber color */
+}
+
+.toolbar .logout-btn:hover {
+  background-color: #fb8c00;
+}
+
+.toolbar .share-btn {
+  background: #2196f3; /* Blue color */
+}
+
+.toolbar .share-btn:hover {
+  background-color: #1976d2;
+}
+.loader {
+  text-align: center;
+  margin-top: 20px;
+}

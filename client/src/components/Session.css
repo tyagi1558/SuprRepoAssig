@@ -1,0 +1,146 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  overflow: hidden; /* Prevent body overflow */
+}
+
+.session-controls {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 30px 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease-in-out; /* Smooth transition on hover */
+}
+
+.room-name-input,
+.room-id-input {
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(72, 195, 96, 0.5);
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 10px;
+  width: 100%; /* Button takes up full width */
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: scale(1.05); /* Slightly increase size for hover effect */
+}
+
+.toggle-buttons {
+  margin-bottom: 20px;
+}
+
+.footer-message {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.toggle-link {
+  color: #4CAF50;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.toggle-link:hover {
+  color: #45a049;
+}
+
+@media (max-width: 768px) {
+  .session-controls {
+    padding: 20px;
+    max-width: 80%;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .toggle-buttons button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .session-controls {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .session-controls {
+    padding: 15px;
+    max-width: 95%;
+  }
+
+  input {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
